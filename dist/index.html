@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>D. U. I. I.</title>
 </head>
 <body>
@@ -11,21 +12,29 @@
     <div id="navBar" class="navBar">
       <a id="homeButton" class="active" href="#home">Home</a>
 
-      <a id="categoriasButton" href="#categorías">Categorías</a>
-      <div id="categoriasDropdown" class="dropdown">
-        <a id="catLibros" href="#libros">Libros</a>
-        <a id="catRevistas" href="#revistas">Revistas</a>
-        <a id="catPrensa" href="#prensa">Prensa</a>
+      <div class="dropdown-content">
+        <button id="categoriasButton" class="dropdown-button">Categorías
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="categoriasDropdown" class="dropdown">
+          <a id="catLibros" href="#libros">Libros</a>
+          <a id="catRevistas" href="#revistas">Revistas</a>
+          <a id="catPrensa" href="#prensa">Prensa</a>
+        </div>
       </div>
 
-      <a id="productosButton" href="#productos">Productos</a>
+      <a id="productosButton" href="#productos">Productos
+        <i class="fa fa-caret-down"></i>
+      </a>
       <div id="productosDropdown" class="dropdown">
         <a id="bestSeller" href="#bestSeller">Best Seller</a>
         <a id="time" href="#time">Time</a>
         <a id="bussinessWeek" href="#bussinessWeek">Bussiness Week</a>
       </div>
 
-      <a id="contactoButton" href="#contacto">Contacto</a>
+      <a id="contactoButton" href="#contacto">Contacto
+        <i class="fa fa-caret-down"></i>
+      </a>
       <div id="contactoDropdown" class="dropdown">
         <a id="map" href="#map">Mapa</a>
         <a id="direccion" href="#direccion">Dirección</a>

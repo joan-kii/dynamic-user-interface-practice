@@ -40,12 +40,10 @@ contactoButton.addEventListener('click', function () {
 })
 
 window.onclick = function (event) {
-  if (!event.target.matches(
-      '#categoriasButton' || 
-      '#productosButton' || 
-      '#contactoButton'
-      )) {
-    const dropdowns = document.getElementsByClassName('showDropdown');
-    console.log(dropdowns);
+  if (!event.target.matches('#categoriasButton') && 
+  !event.target.matches('#productosButton') && 
+  !event.target.matches('#contactoButton')) {
+    const dropdown = document.querySelector('.showDropdown');
+    dropdown.className = 'dropdown';
   }
 }

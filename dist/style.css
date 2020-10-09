@@ -13,7 +13,7 @@ body {
 
 /* NavBar */
 .navBar {
-  display: inline-flex;
+  display: flex;
   width: 100%;
   height: 3em;
   position: fixed;
@@ -24,7 +24,7 @@ body {
   color: inherit;
   text-decoration: none;
   align-self: center;
-  padding: 1em 1em;
+  padding: 15px 1em;
 }
 
 .navBar a:hover {
@@ -37,6 +37,18 @@ body {
   color: black;
 }
 
+.drpdown-content {
+  overflow: hidden;
+  float: left;
+}
+
+.dropdown-button {
+  font-size: inherit;
+  border: none;
+  outline: none;
+  padding: 15px 1em;
+}
+
 .dropdown {
   display: none;
   position: absolute;
@@ -44,7 +56,6 @@ body {
 }
 
 .showDropdown {
-  display: block;
   position: relative;
 
 }
