@@ -21,10 +21,10 @@ body {
 }
 
 .navBar a {
-    color: inherit;
-    text-decoration: none;
-    align-self: center;
-    padding: 1em 1em;
+  color: inherit;
+  text-decoration: none;
+  align-self: center;
+  padding: 1em 1em;
 }
 
 .navBar a:hover {
@@ -37,6 +37,14 @@ body {
   color: black;
 }
 
-.dropdown_1, .dropdown_2, .dropdown_3 {
-    display: none;
+.dropdown {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+}
+
+.showDropdown {
+  display: block;
+  position: relative;
+
 }
