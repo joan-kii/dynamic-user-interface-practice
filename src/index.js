@@ -9,41 +9,35 @@ const contactoDropdown = document.getElementById('contactoDropdown');
 
 /* Functions */
 
-categoriasButton.addEventListener('click', function () {
-  if (categoriasDropdown.className === 'dropdown') {
-    categoriasDropdown.className = 'showDropdown';
-    productosDropdown.className = 'dropdown';
-    contactoDropdown.className = 'dropdown';
+const toggleClass = (dropdown1, dropdown2, dropdown3) => {
+  if (dropdown1.className === 'dropdown') {
+    dropdown1.className = 'showDropdown';
+    dropdown2.className = 'dropdown';
+    dropdown3.className = 'dropdown';
   } else {
-    categoriasDropdown.className = 'dropdown';
+    dropdown1.className = 'dropdown'
   }
-})
+}
+
+categoriasButton.addEventListener('click', function () {
+  toggleClass(categoriasDropdown, productosDropdown, contactoDropdown);
+});
 
 productosButton.addEventListener('click', function () {
-  if (productosDropdown.className === 'dropdown') {
-    productosDropdown.className = 'showDropdown';
-    categoriasDropdown.className = 'dropdown';
-    contactoDropdown.className = 'dropdown';
-  } else {
-    productosDropdown.className = 'dropdown';
-  }
-})
+  toggleClass(productosDropdown, categoriasDropdown, contactoDropdown);
+});
 
 contactoButton.addEventListener('click', function () {
-  if (contactoDropdown.className === 'dropdown') {
-    contactoDropdown.className = 'showDropdown';
-    categoriasDropdown.className = 'dropdown';
-    productosDropdown.className = 'dropdown';
-  } else {
-    contactoDropdown.className = 'dropdown';
-  }
-})
+  toggleClass(contactoDropdown, categoriasDropdown, productosDropdown);
+});
 
 window.onclick = function (event) {
   if (!event.target.matches('#categoriasButton') && 
   !event.target.matches('#productosButton') && 
   !event.target.matches('#contactoButton')) {
     const dropdown = document.querySelector('.showDropdown');
-    dropdown.className = 'dropdown';
+    if (dropdown !== null) {
+      dropdown.className = 'dropdown';
+    }
   }
 }
