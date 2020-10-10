@@ -70,3 +70,32 @@ body {
 .showDropdown a:hover {
   color: white;
 }
+
+@media screen and (max-width: 500px) {
+  .dropdown-content .dropdown-button, .navBar a {
+    padding: 0.7em 0.5em;
+  }
+
+  .showDropdown {
+    min-width: 6.5em;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  i {
+    visibility: hidden;
+  }
+
+  .navBar {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #homeButton {
+    flex-basis: 100%;
+  }
+
+  .dropdown-content {
+    justify-content: center;
+  }
+}
