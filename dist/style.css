@@ -71,6 +71,17 @@ body {
   color: white;
 }
 
+/* Slider */
+.slide-container {
+  max-width: 800px;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+/* Media Queries */ 
 @media screen and (max-width: 500px) {
   .dropdown-content .dropdown-button, .navBar a {
     padding: 0.7em 0.5em;
