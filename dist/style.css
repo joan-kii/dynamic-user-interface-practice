@@ -2,6 +2,8 @@
 html {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,6 +11,7 @@ body {
   height: 100%;
   margin: 0;
   color: #081c15;
+  box-sizing: inherit;
 }
 
 /* NavBar */
@@ -74,31 +77,35 @@ body {
 /* Slider */
 .slide-container {
   position: relative;
-  max-width: 500px;
+  padding-top: 2em;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: inherit;
 }
 
 .mySlides {
-  display: none;
   width: 100%;
 }
 
 .controls-container {
+  width: 100%;
+  padding: 0 16px;
   position: absolute;
-  box-sizing: inherit;
-  max-width: 800px;
+  left: 50%;
   color: white;
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
   font-size: 18px;
   bottom: 0;
-  transform: translate(-50% 0%);
+  transform: translate(-50%, 0%);
+  box-sizing: inherit;
 }
+
 .arrow-left, .arrow-right, .dot {
   cursor: pointer;
+  box-sizing: inherit;
 }
 
 .arrow-left:hover, .arrow-right:hover {
@@ -119,14 +126,19 @@ body {
   height: 13px;
   margin: 0;
   color: black;
-  background-color: white;
+  background-color: transparent;
   border-radius: 50%;
   border: 1px solid grey;
   text-align: center;
+  box-sizing: inherit;
 }
 
 .dot:hover {
-  background-color: #457b9d;
+  background-color: white;
+}
+
+.dotSelected {
+  background-color: white;
 }
 
 /* Media Queries */ 
